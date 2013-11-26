@@ -15,10 +15,11 @@
     <div id="navigation">
     <h2>Welcome</h2>
     <br/>
-     <strong><%= link_to 'Home', '/reviews' %><br /><br /></strong>
+    <strong><%= link_to 'Home', '/reviews' %><br /><br /></strong>
     <strong><%= link_to 'Login to post', { :action => :login} %><br /></strong>
     <p style="color: green"><%= flash[:notice] %></p>
-    <strong><%= link_to 'Register for free login', {:action => :register} %><br /></strong>
+    <strong><%= link_to 'Register for free login', {:action => :register} %><br /><br />
+    </strong>
     
     <strong><%= link_to 'Post a new review', new_review_path %><br /></strong>
     <br />
@@ -35,6 +36,7 @@
     <div id="news">
     <h2>What's cookin'</h2><br />
     The latest restaurant news<br />
+    <%= render( :partial => "news") %>
     </div>
     </div>
     <div id="footer">
